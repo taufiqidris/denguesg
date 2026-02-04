@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_90abc5944157dffdb863cf60206c71b2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_90abc5944157dffdb863cf60206c71b2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_90abc5944157dffdb863cf60206c71b2 = L.map(
+                "map_90abc5944157dffdb863cf60206c71b2",
+                {
+                    center: [1.3521, 103.8198],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a398bd61f50713ac52e2d559b586c65b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a398bd61f50713ac52e2d559b586c65b.addTo(map_90abc5944157dffdb863cf60206c71b2);
+        
+    
+        function geo_json_aaf05c2686a8b110d0aa416bfa39db07_styler(feature) {
+            switch(feature.id) {
+                case "0": case "1": case "3": case "4": 
+                    return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
+                default:
+                    return {"color": "black", "fillColor": "red", "fillOpacity": 0.6, "weight": 1};
+            }
+        }
+
+        function geo_json_aaf05c2686a8b110d0aa416bfa39db07_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_aaf05c2686a8b110d0aa416bfa39db07 = L.geoJson(null, {
+                onEachFeature: geo_json_aaf05c2686a8b110d0aa416bfa39db07_onEachFeature,
+            
+                style: geo_json_aaf05c2686a8b110d0aa416bfa39db07_styler,
+            ...{
+}
+        });
+
+        function geo_json_aaf05c2686a8b110d0aa416bfa39db07_add (data) {
+            geo_json_aaf05c2686a8b110d0aa416bfa39db07
+                .addData(data);
+        }
+            geo_json_aaf05c2686a8b110d0aa416bfa39db07_add({"bbox": [103.75980083598647, 1.317061722199578, 103.9538080366055, 1.3847091364771429], "features": [{"bbox": [103.75980083598647, 1.3580986304958291, 103.76321129297166, 1.3614220534082617], "geometry": {"coordinates": [[[103.75980083598647, 1.359997484933414], [103.75995178302466, 1.359950015892549], [103.76031010375527, 1.359754569430816], [103.76016454715666, 1.3594762425690907], [103.76013321098777, 1.3594923248160158], [103.75995796693398, 1.3591768882849549], [103.76018475233289, 1.359057310300929], [103.76150010193255, 1.3580986304958291], [103.76169656058384, 1.35843674537991], [103.7618547100674, 1.358644975304608], [103.76239629094641, 1.359378404982492], [103.76267726486901, 1.3597635030807087], [103.76302351009724, 1.3602942951475563], [103.76321129297166, 1.3605252244847077], [103.76297746705153, 1.3606533460710373], [103.76268612703326, 1.3607656594707178], [103.76220647101174, 1.3608416597653599], [103.76187532689747, 1.3608097358279723], [103.7604074132979, 1.3614220534082617], [103.75980083598647, 1.359997484933414]]], "type": "Polygon"}, "id": "0", "properties": {"CASE_SIZE": 5, "CONSTRUCTION_SITES": null, "FMEL_UPD_D": "20260128161805", "HOMES": null, "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters", "INC_CRC": "3949222721F4475D", "LOCALITY": "Elizabeth Dr / Jln Intan, Zamrud", "NAME": "Dengue_Cluster", "OBJECTID": 508810, "PUBLIC_PLACES": null, "SHAPE.AREA": 75689.316914405, "SHAPE.LEN": 1183.83261507106}, "type": "Feature"}, {"bbox": [103.87140268866405, 1.3805958565095227, 103.8762250896958, 1.3847091364771429], "geometry": {"coordinates": [[[103.87200668079409, 1.3819839479486258], [103.87176352894505, 1.3811308264771938], [103.87180526092146, 1.3805958565095227], [103.87261103549524, 1.3806349524731745], [103.87361059654276, 1.380670727658611], [103.87360082169646, 1.3809818407907355], [103.8739586982189, 1.3810074037455817], [103.87399146057393, 1.381661544111753], [103.87609516119548, 1.3814671889796257], [103.8762250896958, 1.3835214900002397], [103.87526271741247, 1.3837263394121062], [103.87525261763635, 1.3837895175520465], [103.8750848891502, 1.3838173649899888], [103.87488594164937, 1.3838563456867432], [103.87468291510142, 1.3839237451710007], [103.87414683262682, 1.38400116264196], [103.8739622343316, 1.3841391048470533], [103.87372203932314, 1.383903750065473], [103.87353111483469, 1.3840829548556293], [103.8733340198867, 1.3838919728196106], [103.87285934939538, 1.3842822663296062], [103.87272430243229, 1.3843886118447795], [103.87263762356324, 1.3845238030433922], [103.87245549070794, 1.3847091364771429], [103.87235067692507, 1.3845249310327339], [103.87212436008612, 1.3845939540188705], [103.87210424911011, 1.3845414985267412], [103.87176104984486, 1.3845991247953002], [103.87156136437606, 1.3836211732579224], [103.8714238579112, 1.3827646532580913], [103.87146870560825, 1.3827532873913213], [103.87140268866405, 1.3821053134670114], [103.87200668089478, 1.3819901735903146], [103.87200668079409, 1.3819839479486258]]], "type": "Polygon"}, "id": "1", "properties": {"CASE_SIZE": 2, "CONSTRUCTION_SITES": null, "FMEL_UPD_D": "20260128161805", "HOMES": null, "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters", "INC_CRC": "8F1EA8AEF58494A8", "LOCALITY": "Jln Jarak", "NAME": "Dengue_Cluster", "OBJECTID": 508811, "PUBLIC_PLACES": null, "SHAPE.AREA": 163447.16712205, "SHAPE.LEN": 1913.76354752482}, "type": "Feature"}, {"bbox": [103.77302804230725, 1.317061722199578, 103.77727986680692, 1.32066986779018], "geometry": {"coordinates": [[[103.7735034190082, 1.3197397806685391], [103.77358018906712, 1.3195301418683343], [103.77357428362647, 1.3192732616056102], [103.7734975147818, 1.319131533222822], [103.77307823735721, 1.3187535937801516], [103.77302804230725, 1.3186118669357092], [103.77304575754903, 1.317702448708314], [103.77361562064036, 1.3173097441835835], [103.77518643317208, 1.317333366481563], [103.77543150424115, 1.3171237270340614], [103.77550532099342, 1.317088295768791], [103.77630253812211, 1.3170646741738676], [103.77700822302323, 1.317061722199578], [103.77727986680692, 1.317613868054337], [103.77715880816488, 1.3182368791194263], [103.77711156513463, 1.318753593784798], [103.77713223326016, 1.3195301428762194], [103.77703774872595, 1.3206108143665662], [103.77682515809842, 1.3205901456943767], [103.77594821813385, 1.32066986779018], [103.77556732563632, 1.3206669152059962], [103.77509785380546, 1.3205133766047128], [103.77472877197492, 1.3203155490643197], [103.77442464816514, 1.320123626709901], [103.77421205714616, 1.320008473464179], [103.7735034190082, 1.3197397806685391]]], "type": "Polygon"}, "id": "2", "properties": {"CASE_SIZE": 7, "CONSTRUCTION_SITES": "Plumbing opening", "FMEL_UPD_D": "20260126155631", "HOMES": "Vase, Flower pot tray, Container, Pail, Earthen jar, Water fountain", "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters", "INC_CRC": "892E829CFF81A542", "LOCALITY": "Pine Gr (Nava Grove) / Pine Gr (Pine Grove)", "NAME": "Dengue_Cluster", "OBJECTID": 508812, "PUBLIC_PLACES": "Bin, Discarded plastic container", "SHAPE.AREA": 150041.099766755, "SHAPE.LEN": 1532.98506311491}, "type": "Feature"}, {"bbox": [103.94836643141987, 1.3400734217524115, 103.9538080366055, 1.3452893046703145], "geometry": {"coordinates": [[[103.94902152856811, 1.3432266637965364], [103.94836643141987, 1.3426261438500409], [103.94928088443933, 1.3415751369483893], [103.94940073457023, 1.341661004984079], [103.94958614734782, 1.3417139239484546], [103.94997485448305, 1.3412748282376048], [103.95094452628221, 1.3400734217524115], [103.95226434686285, 1.3411637448360416], [103.9538080366055, 1.3424626860956375], [103.95152515955432, 1.3452893046703145], [103.94902152856811, 1.3432266637965364]]], "type": "Polygon"}, "id": "3", "properties": {"CASE_SIZE": 2, "CONSTRUCTION_SITES": null, "FMEL_UPD_D": "20260126155631", "HOMES": null, "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters", "INC_CRC": "E19BCB9691F06868", "LOCALITY": "Simei St 1 (Blk 110, 116) ", "NAME": "Dengue_Cluster", "OBJECTID": 508813, "PUBLIC_PLACES": null, "SHAPE.AREA": 174105.01250215, "SHAPE.LEN": 1703.90312096376}, "type": "Feature"}, {"bbox": [103.84404366268026, 1.3378986976782885, 103.84707448992778, 1.3409110394262371], "geometry": {"coordinates": [[[103.84707448992778, 1.3408843407987745], [103.84608164003723, 1.3409110394262371], [103.84578138075241, 1.3408762401315268], [103.84545900771747, 1.3407997596552699], [103.84510382070259, 1.3406396219625711], [103.84483322219296, 1.3404500295720918], [103.84465126586207, 1.340292277605279], [103.84446096171432, 1.340085056020516], [103.84432023289902, 1.3398747295137206], [103.8441091881899, 1.3394441344845662], [103.84404366268026, 1.3392646762997629], [103.84515583081775, 1.3392628181125104], [103.84517582147275, 1.3382248237117669], [103.84573668833124, 1.3382234860803761], [103.84574264235877, 1.3379011886282117], [103.84615598917928, 1.3378986976782885], [103.84622852570507, 1.3381443453036925], [103.8464034783064, 1.3385843258400936], [103.84645329612277, 1.338737877620312], [103.84656330542973, 1.3390061223870462], [103.84695972404296, 1.3400631043371871], [103.84701949732165, 1.3402629794051069], [103.84707448992778, 1.3408843407987745]]], "type": "Polygon"}, "id": "4", "properties": {"CASE_SIZE": 3, "CONSTRUCTION_SITES": null, "FMEL_UPD_D": "20260121153909", "HOMES": null, "HYPERLINK": "https://www.nea.gov.sg/dengue-zika/dengue/dengue-clusters", "INC_CRC": "16B8AEC0FBD1258B", "LOCALITY": "Lor 2 Toa Payoh (Blk 122)", "NAME": "Dengue_Cluster", "OBJECTID": 508814, "PUBLIC_PLACES": null, "SHAPE.AREA": 65250.761455315, "SHAPE.LEN": 1151.54340955144}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_aaf05c2686a8b110d0aa416bfa39db07.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["LOCALITY", "CASE_SIZE", "CONSTRUCTION_SITES"];
+    let aliases = ["Location:", "Number of Cases:", "Construction Sites:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_aaf05c2686a8b110d0aa416bfa39db07.addTo(map_90abc5944157dffdb863cf60206c71b2);
+        
+</script>
+</html>
